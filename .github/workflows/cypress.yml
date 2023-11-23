@@ -3,15 +3,14 @@ name: Manually test - cypress test
 on: workflow_dispatch
 
 jobs:
-  cypress-run:
-    runs-on: ubuntu-22.04
+  tests:
+    runs-on: ubuntu-latest
 
     strategy:
       matrix:
         node-version: [18.x]
 
-    
-     steps:
+    steps:
       - uses: actions/checkout@v2
       - name: Use Node.js ${{ matrix.node-version}}
         uses: actions/setup-node@v1
@@ -19,9 +18,9 @@ jobs:
           node-version: ${{ matrix.node-version}}
       - name: npm install
         run: npm ci
-      # - name: fire up backend 
+      # - name: fire up backend
       #   run: nohup npm run backend & exit
       # - name: newman test
       #   run: npm test
       - name: gui testing
-        run: npm cypress-test
+        run: npm run cypress-test
