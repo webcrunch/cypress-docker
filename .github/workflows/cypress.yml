@@ -1,4 +1,6 @@
-name: test and deploy
+name: Manually test - cypress test
+
+on: workflow_dispatch
 
 jobs:
   cypress-run:
@@ -12,4 +14,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           build: npm run build
-          start: npm start
+          start: npm cypress-test
