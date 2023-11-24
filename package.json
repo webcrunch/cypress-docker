@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "test-ui": "cypress open --browser chrome",
     "cypress-test": "cypress run --spec cypress/e2e/1-getting-started" ,
     "test": "echo \"Error: no test specified\" && exit 1"
   },
