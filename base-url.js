@@ -1,2 +1,4 @@
 // Change to the url of the project you are testing
-module.exports = 'http://aftonbladet.se'
+// module.exports = process.env.baseURL
+
+module.exports = "https://www.aftonbladet.se/"
