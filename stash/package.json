@@ -4,8 +4,7 @@
   "description": "Example running Cypress tests against Apache server via docker-compose",
   "scripts": {
     "build": "docker-compose build",
-    "sezo": "npx cypress run  --browser chrome --abort-on-container-exit --exit-code-from e2e",
-    "home": "npx cypress run --spec cypress/e2e/spec.cy.js --browser chrome --abort-on-container-exit --exit-code-from e2e",
+    "up": "docker-compose up --abort-on-container-exit --exit-code-from e2e",
     "effective:config": "circleci config process circle.yml | sed /^#/d"
   },
   "repository": {

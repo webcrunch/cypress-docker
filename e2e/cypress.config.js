@@ -1,10 +1,8 @@
 const { defineConfig } = require("cypress");
-const { baseUrl } = require('./base-url.js');
 
 module.exports = defineConfig({
   e2e: {
-    baseUrl,
-    video: false,
+    video: true,
     supportFile: false,
     screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {
@@ -12,3 +10,4 @@ module.exports = defineConfig({
     },
   },
 });
+

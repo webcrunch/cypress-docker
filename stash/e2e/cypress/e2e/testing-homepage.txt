@@ -1,0 +1,11 @@
+describe('test to go to a page outside the baseUrl', () => {
+    beforeEach(() => {
+        cy.visit('https://sezo.pl/en/model-sezo-al/')
+    })
+
+
+    it('check to see if the text is on the page', () => {
+        cy.contains('SEZO AL Monitoring Outdoor Air Quality')
+    })
+})
+

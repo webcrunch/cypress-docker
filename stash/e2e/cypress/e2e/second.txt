@@ -1,0 +1,11 @@
+describe('template spec, show that Hi there is on the page', () => {
+    beforeEach(() => {
+        cy.visit('/')
+    })
+
+
+    it('loads page again', () => {
+        cy.contains('Hi there')
+    })
+})
+
