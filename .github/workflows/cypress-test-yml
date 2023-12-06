@@ -1,7 +1,6 @@
 name: Manually test - cypress test
 
-on: workflow_dispatch
-
+on: push
 jobs:
   tests:
     runs-on: ubuntu-latest
