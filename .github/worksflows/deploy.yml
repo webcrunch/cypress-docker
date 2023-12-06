@@ -1,0 +1,26 @@
+name: Manually test - cypress test
+
+on: workflow_dispatch
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [20.x]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js ${{ matrix.node-version}}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version}}
+      - name: npm install
+        run: npm ci
+      # - name: fire up backend
+      #   run: nohup npm run backend & exit
+      # - name: newman test
+      #   run: npm test
+      - name: gui testing
+        run: npm run build && npm run sezo
