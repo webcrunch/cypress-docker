@@ -17,9 +17,5 @@ jobs:
           node-version: ${{ matrix.node-version}}
       - name: npm install
         run: npm ci
-      # - name: fire up backend
-      #   run: nohup npm run backend & exit
-      # - name: newman test
-      #   run: npm test
       - name: gui testing
-        run: npm run build && npm run sezo
+        run:  npm run sezo #change nape depending on the folder?? 

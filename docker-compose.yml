@@ -1,8 +1,8 @@
 version: "3"
 services:
   e2e:
-    image: cypres-test
-    # build: ./e2e
+    # image: cypres-test
+    build: ./e2e
     container_name: cypress
     environment:
       - CYPRESS_baseUrl=https://sezo.pl/en/model-sezo-al/
