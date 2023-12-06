@@ -1,12 +1,12 @@
 version: "3"
 services:
   e2e:
-    image: cypress
-    build: ./e2e
+    image: cypres-test
+    # build: ./e2e
     container_name: cypress
     environment:
       - CYPRESS_baseUrl=https://sezo.pl/en/model-sezo-al/
-    command: npm run zero
+    command: npx cypress run #--browser chrome
     # mount the host directory e2e/cypress and the file e2e/cypress.config.js as
     # volumes within the container
     # this means that:

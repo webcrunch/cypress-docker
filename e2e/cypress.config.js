@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
-    video: true,
+    video: false,
     supportFile: false,
     screenshotOnRunFailure: false,
     setupNodeEvents(on, config) {
